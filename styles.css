@@ -1,0 +1,107 @@
+body {
+    background-color: #000000;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+}
+.header {
+    height: 100vh; /* Full-screen header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the left */
+    text-align: left;
+    padding: 20px;
+    background-image: url('https://wallpaperaccess.com/full/2454628.png'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    scroll-snap-align: start;
+    animation: fadeIn 3s ease-in-out; /* Animation */
+}
+.header h1 {
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+.header h2 {
+    color: #dddddd;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    margin: 10px 0 0;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+nav a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+nav a:hover {
+    background-color: #2980b9;
+    border-color: #ffffff;
+}
+.section {
+    padding: 30px 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 800px;
+    border: 1px solid #2980b9;
+    color: #dddddd;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1em;
+    color: #888;
+    margin-top: 20px;
+    scroll-snap-align: start;
+}
+.footer img {
+    display: block; /* Ensures there is no space below the image */
+    width: 35px;
+    height: 35px; /* Ensures the height is the same as the width to maintain a circular shape */
+    margin: 0 10px;
+    transition: opacity 0.3s;
+    padding: 0; /* Remove any extra padding */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image is scaled properly within the circular frame */
+}
+.footer img:hover {
+    opacity: 0.8;
+}
+.social-link {
+    display: inline-block; /* Ensures that the links are placed next to each other */
+    vertical-align: middle; /* Aligns the images in the middle */
+    text-decoration: none; /* Removes the underline */
+    transition: transform 0.3s; /* Adds a smooth hover effect */
+}
+
+.social-link:hover {
+    transform: scale(1.1); /* Slightly enlarges the image on hover */
+}
